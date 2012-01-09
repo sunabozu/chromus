@@ -1,0 +1,1 @@
+[![Build Status](https://secure.travis-ci.org/chromus/chromus.png)](http://travis-ci.org/chromus/chromus)

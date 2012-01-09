@@ -10,4 +10,4 @@ before_script:
   - sh -e /etc/init.d/xvfb start  
 
 script:  
-  - DISPLAY=:99.0 phantomjs spec/run_jasmine.js index.html?test_mode
+  - DISPLAY=:99.0 phantomjs spec/run_jasmine.js index.html
