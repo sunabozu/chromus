@@ -16,7 +16,7 @@
       plugin_path = chromus.plugins_info.vkontakte.path;
       plugin_path = plugin_path.replace(/chrome-extension:\/\/\w+\//, "");
       redirect_uri = [baseLocation, "/../", plugin_path, "/oauth.html"].join('');
-      return link = ["http://api.vkontakte.ru/oauth/authorize?", "client_id=" + VK.APP_ID, "scope=" + VK.SCOPE, "redirect_uri=" + redirect_uri, "display=popup", "response_type=token"].join('&');
+      return link = ["http://api.vk.com/oauth/authorize?", "client_id=" + VK.APP_ID, "scope=" + VK.SCOPE, "redirect_uri=" + redirect_uri, "display=popup", "response_type=token"].join('&');
     },
     searchWithoutLogin: function(args, callback) {
       return $.ajax({
@@ -50,7 +50,7 @@
         data.access_token = args.access_token;
       }
       return $.ajax({
-        url: "https://api.vkontakte.ru/method/audio.search",
+        url: "https://api.vk.com/method/audio.search",
         data: data,
         dataType: "jsonp",
         cache: true,
@@ -64,7 +64,7 @@
               duration: parseInt(i.duration),
               file_url: i.url,
               source_title: "Vkontakte",
-              source_icon: "http://vkontakte.ru/favicon.ico"
+              source_icon: "http://vk.com/favicon.ico"
             };
           });
           return callback(records);
