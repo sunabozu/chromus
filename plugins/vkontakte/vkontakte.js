@@ -4,7 +4,7 @@
   global = this;
 
   VK = {
-    APP_ID: global.debug ? "2649785" : "2698877",
+    APP_ID: "2912956",
     SCOPE: "audio,offline",
     authURL: function() {
       var baseLocation, link, plugin_path, redirect_uri;
